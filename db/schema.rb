@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_05_114610) do
+ActiveRecord::Schema.define(version: 2021_07_11_101716) do
 
 
 
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_07_05_114610) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
 end
