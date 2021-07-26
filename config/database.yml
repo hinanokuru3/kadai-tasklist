@@ -11,7 +11,7 @@
 #
 default: 
   adapter: postgresql
-  encoding: unicord
+  encoding: unicode
   pool: 5
   database: tasklist_production
   username: tasklist
