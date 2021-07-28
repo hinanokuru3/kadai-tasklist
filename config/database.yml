@@ -9,13 +9,13 @@
 # And be sure to use new-style password hashing:
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
-default: 
+production: 
   adapter: postgresql
   encoding: unicode
   pool: 5
   database: tasklist_production
   username: tasklist
-  password: <%= ENV['TASKLIST_DATABASE_PASSWORD']%>
+  password: <%= ENV['TASKLIST_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
