@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :tasks
   
   root to: 'tasks#index'
-  resources :users, only: [:new, :create]
+  get 'signup', to: 'users#new'
+  resources :users, only: [:create]
 end
