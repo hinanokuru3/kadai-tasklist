@@ -25,6 +25,7 @@ class TasksController < ApplicationController
             flash[:success] = 'Task が正常に投稿されました'
             redirect_to @task
         else
+            @tasks = current_user.tasks.order(id: :desc)
             flash.now[:danger] = 'Task が投稿されませんでした'
             render :new
         end
@@ -65,7 +66,7 @@ class TasksController < ApplicationController
  
   # Strong Parameter
     def task_params
-        params.require(:task).permit(:content, :status)
+        params.require(:task).permit(:content, :status, :id)
     end
     
     def correct_user
