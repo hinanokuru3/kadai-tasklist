@@ -59,7 +59,7 @@ class TasksController < ApplicationController
     private
 
     def set_task
-        @task = current_user.tasks.find_by(id: params[:id])
+        @task = current_user.tasks.find(params[:id])
     end
  
  
